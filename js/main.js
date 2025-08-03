@@ -30,24 +30,45 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(products => {
                 const recommendSection = document.getElementById("recommendation-section");
 
-                // Chọn 3 sản phẩm bất kỳ (hoặc chọn sản phẩm theo logic riêng)
-                const recommendedItems = products.slice(0, 4);
+                // Chọn 2 nhóm, mỗi nhóm 2 sản phẩm
+                const group1 = products.slice(0, 2);
+                const group2 = products.slice(2, 4);
 
-                recommendSection.innerHTML = `<h2>Không mua cắt cu</h2><div class="recommend-grid"></div>`;
-
-                const grid = recommendSection.querySelector('.recommend-grid');
-
-                recommendedItems.forEach(product => {
-                    const item = document.createElement("div");
-                    item.className = "recommend-item";
-                    item.innerHTML = `
-                        <a href="product.html?id=${product.id}">
-                            <img src="${product.image}" alt="${product.name}" class="recommend-img">
-                            <p class="recommend-price">$${product.price}</p>
-                        </a>
-                    `;
-                    grid.appendChild(item);
-                });
+                recommendSection.innerHTML = `
+                    <div class="custom-product-group">
+                        <h2>Recommended Products</h2>
+                        <div class="custom-product-block">
+                            <div class="custom-product-name">
+                                <h3>Books</h3>
+                            </div>    
+                            <div class="custom-product-list">
+                                ${group1.map(product => `
+                                    <div class="custom-product-item">
+                                        <a href="product.html?id=${product.id}">
+                                            <img src="${product.image}" alt="${product.name}">
+                                            <p class="custom-price">$${product.price}</p>
+                                        </a>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        <div class="custom-product-block">
+                            <div class="custom-product-name">
+                                <h3>Electronics</h3>
+                            </div> 
+                            <div class="custom-product-list">
+                                ${group2.map(product => `
+                                    <div class="custom-product-item">
+                                        <a href="product.html?id=${product.id}">
+                                            <img src="${product.image}" alt="${product.name}">
+                                            <p class="custom-price">$${product.price}</p>
+                                        </a>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
             })
         if (document.getElementById('product-grid') && document.getElementById('bid-grid')) {
             Promise.all([
