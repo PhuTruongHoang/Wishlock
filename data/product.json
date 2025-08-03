@@ -1,0 +1,233 @@
+[
+  {
+    "id": 101,
+    "name": "Vintage Leather Bag",
+    "image": "product-pic/1.jpg",
+    "shipping_fee": "$10",
+    "category": "Accessories",
+    "brand": "LeatherWorks",
+    "condition": "Used - Good",
+    "ship_from": "Ho Chi Minh City, Vietnam",
+    "desc": "A high-quality vintage leather bag with minimal wear.",
+    "price": 120,
+    "seller": {
+      "name": "Huyen Tran",
+      "rating": 4.8,
+      "reviews": 42,
+      "avatar": "product-pic/avatar-seller-pic.jpg",
+      "location": "Ho Chi Minh City"
+    },
+    "comments": [
+      {
+        "user": "fashionista01",
+        "text": "Exactly as described! Looks amazing.",
+        "time": "2025-07-29 16:12",
+        "rating": 5,
+        "reply": "Glad you love it! Thanks for your kind words."
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Polaroid SX-70 Camera",
+    "image": "product-pic/2.jpg",
+    "shipping_fee": "$15",
+    "category": "Electronics",
+    "brand": "Polaroid",
+    "condition": "Used - Very Good",
+    "ship_from": "Da Nang, Vietnam",
+    "desc": "Classic folding instant camera in working condition.",
+    "price": 250,
+    "seller": {
+      "name": "Bao Nguyen",
+      "rating": 4.9,
+      "reviews": 55,
+      "avatar": "product-pic/avatar-seller-pic.jpg",
+      "location": "Da Nang"
+    },
+    "comments": [
+      {
+        "user": "cameracollector",
+        "text": "Camera works like a charm! Thanks a lot.",
+        "rating": 5,
+        "time": "2025-07-30 10:22",
+        "reply": "You're welcome! Happy shooting!"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Lomo Vinyl Record Player",
+    "image": "product-pic/3.jpg",
+    "shipping_fee": "$8",
+    "category": "Audio",
+    "brand": "Lomo",
+    "condition": "Used - Excellent",
+    "ship_from": "Hanoi, Vietnam",
+    "desc": "Retro-style vinyl record player in great condition.",
+    "price": 180,
+    "seller": {
+      "name": "Anh Thu",
+      "rating": 4.7,
+      "reviews": 38,
+      "avatar": "product-pic/avatar-seller-pic.jpg",
+      "location": "Hanoi"
+    },
+    "comments": [
+      {
+        "user": "retrolover",
+        "text": "Looks fantastic and sounds even better!",
+        "rating": 5,
+        "time": "2025-07-28 13:45",
+        "reply": "Thank you for the lovely feedback!"
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Collector's Antique Clock",
+    "image": "product-pic/4.jpg",
+    "shipping_fee": "$5",
+    "category": "Home Decor",
+    "brand": "Antique Co.",
+    "condition": "Vintage",
+    "ship_from": "Hue, Vietnam",
+    "desc": "A beautifully crafted antique clock for serious collectors.",
+    "price": 300,
+    "seller": {
+      "name": "Minh Chau",
+      "rating": 5.0,
+      "reviews": 30,
+      "avatar": "product-pic/avatar-seller-pic.jpg",
+      "location": "Hue, Vietnam"
+    },
+    "comments": [
+      {
+        "user": "antiqueslover",
+        "text": "Even better in person! Very happy with the purchase.",
+        "rating": 5,
+        "time": "2025-07-27 11:05",
+        "reply": "So happy to hear that! Thank you for appreciating the item."
+      },
+      {
+        "user": "timetraveler",
+        "text": "Truly a collector's item. Worth every penny.",
+        "rating": 5,
+        "time": "2025-07-29 17:08",
+        "reply": "Appreciate your support! It means a lot to us."
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "name": "Adidas Yeezy Boost 350",
+    "image": "product-pic/5.jpg",
+    "shipping_fee": "$12",
+    "category": "Footwear",
+    "brand": "Adidas",
+    "condition": "Like New",
+    "ship_from": "Can Tho, Vietnam",
+    "desc": "Genuine Yeezy Boosts worn only twice, includes box.",
+    "price": 500,
+    "seller": {
+      "name": "Khanh Linh",
+      "rating": 4.6,
+      "reviews": 65,
+      "avatar": "product-pic/avatar-seller-pic.jpg",
+      "location": "Can Tho"
+    },
+    "comments": [
+      {
+        "user": "sneakerhead",
+        "text": "Very clean and comfortable. Thanks!",
+        "rating": 4,
+        "time": "2025-07-28 09:32",
+        "reply": "Thanks for bidding! Enjoy the sneakers!"
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "name": "GameBoy Color Console",
+    "image": "product-pic/6.jpg",
+    "shipping_fee": "$7",
+    "category": "Gaming",
+    "brand": "Nintendo",
+    "condition": "Used - Good",
+    "ship_from": "Da Lat, Vietnam",
+    "desc": "Classic Nintendo GameBoy Color with Tetris cartridge.",
+    "price": 150,
+    "seller": {
+      "name": "Tuan Kiet",
+      "rating": 4.5,
+      "reviews": 29,
+      "avatar": "product-pic/avatar-seller-pic.jpg",
+      "location": "Da Lat"
+    },
+    "comments": [
+      {
+        "user": "8bitgamer",
+        "text": "Brings back memories! Works perfectly.",
+        "rating": 5,
+        "time": "2025-07-31 08:15",
+        "reply": "Happy to hear that! Enjoy your nostalgic gameplay."
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "name": "Handmade Rattan Chair",
+    "image": "product-pic/7.jpg",
+    "shipping_fee": "$20",
+    "category": "Furniture",
+    "brand": "Local Artisan",
+    "condition": "New",
+    "ship_from": "Hoi An, Vietnam",
+    "desc": "Handwoven rattan chair, perfect for indoor/outdoor use.",
+    "price": 210,
+    "seller": {
+      "name": "Lan Huong",
+      "rating": 4.9,
+      "reviews": 50,
+      "avatar": "product-pic/avatar-seller-pic.jpg",
+      "location": "Hoi An"
+    },
+    "comments": [
+      {
+        "user": "interiorlove",
+        "text": "Very sturdy and beautiful craftsmanship.",
+        "rating": 5,
+        "time": "2025-07-30 15:04",
+        "reply": "Thank you! We take pride in our handmade goods."
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "name": "Old-school Vinyl Records Set",
+    "image": "product-pic/8.jpg",
+    "shipping_fee": "$6",
+    "category": "Music",
+    "brand": "Various Artists",
+    "condition": "Used - Very Good",
+    "ship_from": "Hai Phong, Vietnam",
+    "desc": "Collection of 10 classic vinyl records in great shape.",
+    "price": 95,
+    "seller": {
+      "name": "Hoai Nam",
+      "rating": 4.4,
+      "reviews": 22,
+      "avatar": "product-pic/avatar-seller-pic.jpg",
+      "location": "Hai Phong"
+    },
+    "comments": [
+      {
+        "user": "vinyladdict",
+        "text": "Great sound, great variety. Thanks!",
+        "rating": 4,
+        "time": "2025-07-29 12:48",
+        "reply": "You’re welcome! Enjoy spinning those records!"
+      }
+    ]
+  }
+]

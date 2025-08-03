@@ -1,0 +1,128 @@
+[
+  {
+    "id": 101,
+    "name": "Rare Collectible Watch",
+    "image": "product-pic/1.jpg",
+    "shipping_fee": "$5",
+    "category": "Accessories",
+    "brand": "Omega",
+    "condition": "Used - Like New",
+    "ship_from": "Hanoi, Vietnam",
+    "desc": "A luxury collectible timepiece with a timeless design.",
+    "currentBid": 240,
+    "seller": {
+      "name": "Thanh Nguyen",
+      "rating": 4.8,
+      "reviews": 25,
+      "avatar": "product-pic/avatar-seller-pic.jpg",
+      "location": "Hanoi, Vietnam"
+    },
+    "comments": [
+      {
+        "user": "trader88",
+        "text": "Beautiful watch! Very satisfied with the quality.",
+        "rating": 5,
+        "time": "2025-07-23 11:48",
+        "reply": "Thank you for your kind words! Glad you're happy with the purchase."
+      },
+      {
+        "user": "vintageHunter",
+        "text": "Shipping was fast and item as described.",
+        "rating": 4,
+        "time": "2025-07-29 12:48",
+        "reply": "Thanks for the feedback! We always try to ship quickly."
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Limited Edition Sneakers",
+    "image": "product-pic/2.jpg",
+    "shipping_fee": "$5",
+    "category": "Footwear",
+    "brand": "Nike",
+    "condition": "New",
+    "ship_from": "Ho Chi Minh City, Vietnam",
+    "desc": "Exclusive release sneakers perfect for street style lovers.",
+    "currentBid": 120,
+    "seller": {
+      "name": "Linh Tran",
+      "rating": 4.6,
+      "reviews": 18,
+      "avatar": "product-pic/avatar-seller-pic.jpg",
+      "location": "Ho Chi Minh City, Vietnam"
+    },
+    "comments": [
+      {
+        "user": "sneakerhead95",
+        "text": "Exactly what I wanted! 100% authentic.",
+        "rating": 5,
+        "time": "2025-07-29 12:48",
+        "reply": "Glad you liked it! Thanks for trusting us!"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Vintage Leather Bag",
+    "image": "product-pic/3.jpg",
+    "shipping_fee": "$5",
+    "category": "Bags",
+    "brand": "Gucci",
+    "condition": "Used - Good",
+    "ship_from": "Da Nang, Vietnam",
+    "desc": "Elegant vintage leather bag that adds class to any outfit.",
+    "currentBid": 80,
+    "seller": {
+      "name": "Hoa Le",
+      "rating": 4.7,
+      "reviews": 12,
+      "avatar": "product-pic/avatar-seller-pic.jpg",
+      "location": "Da Nang, Vietnam"
+    },
+    "comments": [
+      {
+        "user": "fashionista99",
+        "text": "Love the vintage vibe. Slight wear but still gorgeous.",
+        "rating": 4,
+        "time": "2025-05-29 09:32",
+        "reply": "Thanks! We always aim to preserve that vintage charm!"
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Collector's Antique Clock",
+    "image": "product-pic/4.jpg",
+    "shipping_fee": "$5",
+    "category": "Home Decor",
+    "brand": "Antique Co.",
+    "condition": "Vintage",
+    "ship_from": "Hue, Vietnam",
+    "desc": "A beautifully crafted antique clock for serious collectors.",
+    "currentBid": 300,
+    "seller": {
+      "name": "Minh Chau",
+      "rating": 5.0,
+      "reviews": 30,
+      "avatar": "product-pic/avatar-seller-pic.jpg",
+      "location": "Hue, Vietnam"
+    },
+    "comments": [
+      {
+        "user": "antiqueslover",
+        "text": "Even better in person! Very happy with the purchase.",
+        "rating": 5,
+        "time": "2025-04-24 13:56",
+        "reply": "So happy to hear that! Thank you for appreciating the item."
+      },
+      {
+        "user": "timetraveler",
+        "text": "Truly a collector's item. Worth every penny.",
+        "rating": 5,
+        "time": "2025-01-22 22:43",
+        "reply": "Appreciate your support! It means a lot to us."
+      }
+    ]
+  }
+]

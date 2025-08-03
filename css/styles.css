@@ -1,0 +1,334 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+}
+
+/* Layout */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: #e3f0ff;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.section {
+    max-width: 1000px;       
+    margin: 40px auto;        
+    padding: 10px;
+    background-color: #f5f5f5;   
+    border-radius: 20px;
+    color: #2B2B2B;
+    justify-items: center;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.section-name {
+  width: 60%;
+  flex: 1;
+  background-color: #ffe64a;
+  border: 2px solid #111;
+  margin: none;
+  border-radius: 12px;
+  text-align: center;
+      margin-bottom: 10px;
+}
+
+.section h2 {
+  margin: 5px;
+  font-size: 2rem;
+  color: #2B2B2B;
+}
+
+
+
+/* ===== Bố cục tổng thể ===== */
+.main-container {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* ===== Sidebar bên trái ===== */
+.left-card-section {
+    flex: 20%;
+    background-color: #f9f9f9;
+    border-right: 1.5px solid #ddd;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+     
+}
+
+.category-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3px;
+    border-radius: 12px;
+  border: 2px solid #111;
+  background-color: #ffe64a
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #2B2B2B;;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.category-item:hover {
+  background-color: #FFC107;
+}
+
+.category-item svg {
+    margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  fill: #2B2B2B;
+}
+
+/* ===== Nội dung bên phải ===== */
+.right-content {
+  flex: 80%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  background-color: #f5f5f5;
+}
+
+/* Panel chung */
+.left-panel,
+.right-panel {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+  background-color: #87A2FF;
+}
+
+/* Panel bên trái chi tiết */
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 2px solid #111;
+}
+
+.left-panel h2 {
+    flex: 15%;
+  margin: 0;
+  padding: 8px 0;
+  font-size: 1.2rem;
+  color: #2B2B2B;
+}
+
+/* ===== Danh sách gợi ý ===== */
+.recommend-grid {
+    flex: 85%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 3px;
+  background-color: #87A2FF;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+/* Item trong danh sách */
+.recommend-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  border: 2px solid #111;
+}
+
+.recommend-item:hover {
+  transform: scale(1.05);
+}
+
+.recommend-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Ảnh sản phẩm */
+.recommend-img {
+    flex: 90%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Giá sản phẩm */
+.recommend-price {
+    flex: 10%;
+  font-weight: bold;
+  color: #FF4500;
+  margin: 0;
+  /* Nếu muốn hiện khi hover:
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  */
+}
+
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 2px solid #111;
+}
+/* <!-- Product and Bidding Grids --> */
+
+/* ==== Product Grid ==== */
+.bid-grid,
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));   
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ==== Product Card ==== */
+.product-card,
+.product-card.bidding {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    transition: box-shadow 0.3s;
+    color: #222;
+    border: #111 2px solid;
+}
+
+.product-card:hover {
+    background-color: #FFE26D;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ==== Product Image ==== */
+.product-card img,
+.product-card.bidding img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+/* ==== Product Name + Price ==== */
+.product-card h3 {
+    font-size: 1.1rem;
+    margin: 10px 0 5px;
+    color: #2B2B2B;
+}
+
+.product-card p {
+    text-align: left;
+    margin: 4px 0;
+    font-size: 0.95rem;
+    color: #2B2B2B;
+    white-space: nowrap;         
+    overflow: hidden;             
+    text-overflow: ellipsis;      
+    max-width: 100%;             
+}
+
+.price {
+    font-size: 1.5rem !important;
+    font-weight: bold;
+    color: #FF4500 !important;
+}
+
+/* ==== Button Styles ==== */
+.buy-button,
+.bid-link {
+    margin-top: 10px;
+    padding: 10px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.buy-button:hover {
+    background: #218838;
+}
+
+.bid-link {
+    background: #ff9800;
+}
+
+.bid-link:hover {
+    background: #e68a00;
+}
+
+/* ==== Seller Info ==== */
+.seller-info {
+    display: flex;
+    align-items: start;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.seller-avatar {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+}
+
+.seller-name {
+    font-size: 0.85rem;
+    align-self: center;
+    color: rgb(156, 156, 156);
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Wishlock - Bidding Page</title>
+    <link rel="icon" type="image/png" href="product-pic/logo-pic.png"/>
+    <link rel="stylesheet" href="css/product-bidding.css"/>
+    <link rel="stylesheet" href="components/header/header.css"> 
+    <link rel="stylesheet" href="components/footer/footer.css"> 
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header -->
+        <div id="header"></div>
+
+        <!-- Nội dung sản phẩm đấu giá -->
+        <main id="product-detail" class="product-detail-section">
+            <!-- Product details will be injected here -->
+        </main>
+
+        <!-- Zoom Modal -->
+        <div id="zoomModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="zoomedImage">
+                <div class="zoom-controls">
+                    <button id="zoomInBtn">＋</button>
+                    <button id="zoomOutBtn">－</button>
+                </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+    </div>
+    <script src="js/bidding.js"></script>
+</body>
+</html>
