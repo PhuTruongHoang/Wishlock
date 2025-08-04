@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 const recommendSection = document.getElementById("recommendation-section");
 
                 // Chọn 2 nhóm, mỗi nhóm 2 sản phẩm
-                const group1 = products.slice(0, 2);
-                const group2 = products.slice(2, 4);
+                const group1 = products.slice(0, 3);
+                const group2 = products.slice(3, 6);
 
                 recommendSection.innerHTML = `
                     <div class="custom-product-group">
@@ -70,6 +70,65 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                 `;
             })
+        fetch('data/forum.json')
+            .then(res => res.json())
+            .then(forums => {
+                // Lấy 3 comment có nhiều like nhất
+                const topComments = forums
+                    .filter(f => f.content && typeof f.likes === 'number')
+                    .sort((a, b) => b.likes - a.likes)
+                    .slice(0, 3);
+
+                const commentSection = document.getElementById('comment-section');
+                if (!commentSection) return;
+
+                // Tạo nút Go to Forum ở trên
+                const forumBtn = document.createElement('a');
+                forumBtn.className = 'forum-link-btn';
+                forumBtn.href = 'forum.html';
+                forumBtn.textContent = 'The Forum';
+                commentSection.appendChild(forumBtn);
+
+                // Tạo khung chứa 2 comment nổi bật
+                const featuredListDiv = document.createElement('div');
+                featuredListDiv.className = 'featured-comment-list';
+                commentSection.appendChild(featuredListDiv);
+
+                let currentIdx = 0;
+                function showComments(idx) {
+                    featuredListDiv.innerHTML = '';
+                    for (let i = 0; i < 3; i++) {
+                        const c = topComments[(idx + i) % topComments.length];
+                        const commentDiv = document.createElement('div');
+                        commentDiv.className = 'featured-comment';
+                        commentDiv.innerHTML = `
+                            <div class="featured-comment-block">
+                                <div class="featured-comment-content">
+                                    <span class="featured-comment-icon">💬</span>
+                                    <span>${c.content}</span>
+                                </div>
+                                <div class="featured-comment-meta">
+                                    <img src="${c.user?.avatar || 'user-pic/default.jpg'}" class="featured-comment-avatar" alt="avatar">
+                                    <span class="featured-comment-likes">❤️ ${c.likes}</span>
+                                    <span class="featured-comment-time">${c.time || ''}</span>
+                                </div>
+                            </div>
+                        `;
+                        // Khi click vào comment, chuyển đến forum.html và scroll đến comment đó (theo id)
+                        commentDiv.onclick = () => {
+                            window.location.href = `forum.html#comment-${c.id}`;
+                        };
+                        featuredListDiv.appendChild(commentDiv);
+                    }
+                }
+
+                showComments(currentIdx);
+
+                setInterval(() => {
+                    currentIdx = (currentIdx + 1) % topComments.length;
+                    showComments(currentIdx);
+                }, 4000);
+            });
         if (document.getElementById('product-grid') && document.getElementById('bid-grid')) {
             Promise.all([
                 fetch('data/product.json').then(res => res.json()),

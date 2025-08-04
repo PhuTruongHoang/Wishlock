@@ -3,7 +3,12 @@
     "id": 1,
     "user": {
       "name": "An Nguyen",
-      "avatar": "user-pic/avatar1.jpg"
+      "avatar": "product-pic/avatar-seller-pic.jpg"
+    },
+    "product": {
+      "name": "Vintage Leather Bag",
+      "image": "product-pic/1.jpg",
+      "price": 720
     },
     "content": "I'm selling my iPhone 13 Pro Max (green, 256GB) for $720. Anyone interested?",
     "likes": 5,
@@ -25,7 +30,12 @@
     "id": 2,
     "user": {
       "name": "Linh Tran",
-      "avatar": "user-pic/avatar2.jpg"
+      "avatar": "product-pic/avatar-seller-pic.jpg"
+    },
+    "product": {
+      "name": "Vintage Leather Bag",
+      "image": "product-pic/1.jpg",
+      "price": 720
     },
     "content": "Letting go of my authentic Coach bag, fullbox from the US. Price: $100 (negotiable).",
     "likes": 9,
@@ -42,7 +52,12 @@
     "id": 3,
     "user": {
       "name": "David Pham",
-      "avatar": "user-pic/avatar3.jpg"
+      "avatar": "product-pic/avatar-seller-pic.jpg"
+    },
+    "product": {
+      "name": "Vintage Leather Bag",
+      "image": "product-pic/1.jpg",
+      "price": 720
     },
     "content": "Selling used GoPro Hero 9 with accessories – works perfectly. Asking for $180.",
     "likes": 3,
@@ -53,7 +68,12 @@
     "id": 4,
     "user": {
         "name": "Minh Le",
-        "avatar": "user-pic/avatar4.jpg"
+        "avatar": "product-pic/avatar-seller-pic.jpg"
+    },
+    "product": {
+      "name": "Vintage Leather Bag",
+      "image": "product-pic/1.jpg",
+      "price": 720
     },
     "content": "Looking for a used Kindle Paperwhite, anyone selling?",
     "likes": 0,

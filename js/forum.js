@@ -33,22 +33,30 @@ document.addEventListener('DOMContentLoaded', function () {
             products.forEach(product => {
                 const card = document.createElement("div");
                 card.className = "card";
-
+                card.id = `comment-${product.id}`;
                 // Nếu có ảnh sản phẩm thì hiển thị
-                if (product.image) {
+                if (product.product && product.product.image) {
+                    const imgContainer = document.createElement("div");
+                    imgContainer.className = "product-img-container";
+
                     const img = document.createElement("img");
-                    img.src = product.image;
-                    img.alt = product.name || "Product";
+                    img.src = product.product.image;
+                    img.alt = product.product.name || "Product";
                     img.className = "product-img";
-                    card.appendChild(img);
+
+                    imgContainer.appendChild(img);
+                    card.appendChild(imgContainer);
                 }
 
                 const price = document.createElement("div");
-                price.className = "price";
                 // Tìm giá trong content nếu có
-                const priceMatch = product.content.match(/\$\d+/);
-                price.textContent = priceMatch ? priceMatch[0] : "";
-                card.appendChild(price);
+                if (product.product && product.product.price !== undefined) {
+                    const price = document.createElement("div");
+                    price.className = "price";
+                    price.textContent = `$${product.product.price}`;
+                    card.appendChild(price);
+                }
+
 
                 const seller = document.createElement("div");
                 seller.className = "seller";
@@ -148,9 +156,21 @@ document.addEventListener('DOMContentLoaded', function () {
                         commentForm.style.display = "none";
                     }
                 };
-
-
                 feed.appendChild(card);
+                
+                setTimeout(() => {
+                    const hash = window.location.hash;
+                    if (hash && hash.startsWith('#comment-')) {
+                        const target = document.querySelector(hash);
+                        if (target) {
+                            target.scrollIntoView({ behavior: "smooth", block: "center" });
+                            target.style.boxShadow = "0 0 0 4px red";
+                            setTimeout(() => {
+                                target.style.boxShadow = "";
+                            }, 2000);
+                        }
+                    }
+                }, 100);
             });
         }
     });

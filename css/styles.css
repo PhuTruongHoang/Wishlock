@@ -62,9 +62,8 @@ main {
 /* ===== Sidebar bên trái ===== */
 .left-card-section {
     flex: 20%;
-    background-color: #f9f9f9;
     border-right: 1.5px solid #ddd;
-    padding-right: 1rem;
+    padding: 0 0.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,17 +118,19 @@ main {
 /* Panel chung */
 .left-panel,
 .right-panel {
-  flex: 1;
+  flex: 50%;
   border: 1px solid #ddd;
   border-radius: 12px;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 100%;
+  min-width: 0; /* Thêm dòng này để panel co lại khi thiếu không gian */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   box-sizing: border-box;
   background-color: #87A2FF;
+  margin: 0; /* Xóa margin nếu có */
 }
 
 /* Panel bên trái chi tiết */
@@ -152,18 +153,23 @@ main {
 /* ===== Danh sách gợi ý ===== */
 .custom-product-group {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   justify-content: center;
   margin-bottom: 12px;
   flex-direction: column;
   position: relative;
 }
 .custom-product-group h2 {
-  flex: 30%;
-  text-align: center;
+  font-weight: bold;
+  border: 2px solid #111;
+  border-radius: 12px;
+  padding: 8px 0;
+  background: #ffe64a;
   color: #2B2B2B;
-  font-size: 1.5rem;
-  /* margin: 12px; */
+  font-size: 1.5rem;  
+  text-align: center;
+  margin-top: 15px;
+  flex: 30%;
   max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -173,18 +179,51 @@ main {
 }
 
 .custom-product-block {
-  background: #e3f0ff;
+  background: #fffbe6;
   border-radius: 16px;
-  padding: 8px 12px;
-  margin: 0 16px;
+  padding: 12px 8px;
+  margin: 0 8px;
   box-shadow: 0 2px 8px rgba(44,115,210,0.08);
   min-width: 220px;
   display: flex;
+  flex-direction: column;
+    border: 2px solid #FFD93B;
+  
 }
 
+.custom-product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 12px;
+    justify-content: center;      /* Các sản phẩm căn giữa, vừa panel */
+    align-items: stretch;         /* Các sản phẩm cùng chiều cao */
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.custom-product-item {
+      background: #fffbe6;     
+    display: flex;
+    flex-direction: column; /* Đảm bảo dọc */
+    align-items: center;
+    text-align: center;
+    border-radius: 12px;
+    padding: 6px;
+    transition: transform 0.2s ease-out;
+}
+
+.custom-product-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(44,115,210,0.12);
+  background-color: #FFE26D;
+}
 .custom-product-name {
-  flex: 30%;
-  margin: 0 0 12px 0;
+  flex: 10%;
+  margin: 0;
   color: #2C73D2;
   font-size: 1rem;
   text-align: start;
@@ -193,47 +232,12 @@ main {
   white-space: nowrap;
 }
 .custom-product-name h3 {
-  color: #00308f;
+  margin: 0;
+  margin: 0 20px;
+  padding-bottom: 4px;
+  color: #2B2B2B;
   font-weight: 750 !important;
-}
-.custom-product-list {
-  flex: 70%;
-  background-color: transparent; 
-  flex: 70%;
-  display: flex;
-  padding: 8px;
-  border-radius: 12px;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.custom-product-list::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  background: rgba(245,245,245,0.7); 
-  z-index: 1;
-  pointer-events: none;
-}
-
-.custom-product-item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border-radius: 12px;
-  padding: 8px;
-  box-shadow: 0 1px 4px rgba(44,115,210,0.06);
-  transition: transform 0.2s ease-out;
-  z-index: 2;
-}
-.custom-product-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 2px 8px rgba(44,115,210,0.12);
-  background-color: #e3f0ff;
+  border-bottom: 1px solid #ddd;
 }
 .custom-product-item a {
   text-decoration: none;
@@ -244,38 +248,130 @@ main {
   width: 90px;
   height: 90px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-bottom: 8px;
 }
 .custom-price {
   font-weight: bold;
-  color: #FF4500;
+  color: red;
   margin: 0;
 }
 .right-panel {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  border: 2px solid #111;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 8px;
+    border: 2px solid #111;
+    gap: 12px;
 }
 .forum-link-btn {
+  font-weight: bold;
+  border: 2px solid #111;
+  border-radius: 12px;
+  background: #ffe64a;
+  color: #2B2B2B;
+  font-size: 1.5rem;  
+  text-align: center;
+  margin-top: 25px;
+    width: 100%;
+    max-width: 100%;
+    align-self: stretch;
+    padding: 8px 0;
+    box-sizing: border-box;
+    color: #2B2B2B;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #2C73D2;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    padding: 16px 0;
-    margin: 24px auto;
-    text-decoration: none;
-    width: 90%;
     transition: background 0.2s;
+    text-decoration: none;
 }
 .forum-link-btn:hover {
     background: #1A5BB8;
+}
+
+.featured-comment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin: 0;
+    padding: 15px 0;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.featured-comment {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    padding: 12px 10px;
+    background: #fffbe6;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(255,217,59,0.10);
+    border: 2px solid #FFD93B;
+    min-height: 60px;
+    font-size: 1.05rem;
+    color: #2B2B2B;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    word-break: break-word;
+    white-space: normal;    
+    cursor: pointer;
+    flex: 1;
+}
+
+.featured-comment-block {
+    width: 100%;
+}
+
+.featured-comment-content {
+    font-size: 1.05rem;
+    color: #2C73D2;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.featured-comment-icon {
+    font-size: 1.3rem;
+}
+
+.featured-comment-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+}
+
+.featured-comment-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #FFD93B;
+}
+
+.featured-comment-likes {
+    color: red;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px);}
+    to { opacity: 1; transform: translateY(0);}
 }
 /* <!-- Product and Bidding Grids --> */
 
