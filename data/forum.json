@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "user": {
+      "name": "An Nguyen",
+      "avatar": "user-pic/avatar1.jpg"
+    },
+    "content": "I'm selling my iPhone 13 Pro Max (green, 256GB) for $720. Anyone interested?",
+    "likes": 5,
+    "time": "2025-08-01 15:20",
+    "replies": [
+      {
+        "user": "techlover88",
+        "text": "Is the phone still under warranty?",
+        "time": "2025-08-01 16:10"
+      },
+      {
+        "user": "An Nguyen",
+        "text": "Yes, it's covered until November!",
+        "time": "2025-08-01 16:15"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "user": {
+      "name": "Linh Tran",
+      "avatar": "user-pic/avatar2.jpg"
+    },
+    "content": "Letting go of my authentic Coach bag, fullbox from the US. Price: $100 (negotiable).",
+    "likes": 9,
+    "time": "2025-08-02 10:45",
+    "replies": [
+      {
+        "user": "fashionista01",
+        "text": "Do you have real photos of the item?",
+        "time": "2025-08-02 11:00"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "user": {
+      "name": "David Pham",
+      "avatar": "user-pic/avatar3.jpg"
+    },
+    "content": "Selling used GoPro Hero 9 with accessories – works perfectly. Asking for $180.",
+    "likes": 3,
+    "time": "2025-08-03 09:30",
+    "replies": []
+  },
+  {
+    "id": 4,
+    "user": {
+        "name": "Minh Le",
+        "avatar": "user-pic/avatar4.jpg"
+    },
+    "content": "Looking for a used Kindle Paperwhite, anyone selling?",
+    "likes": 0,
+    "time": "2025-08-04 09:00",
+    "replies": []
+  }
+]

@@ -259,6 +259,24 @@ main {
   align-items: stretch;
   border: 2px solid #111;
 }
+.forum-link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2C73D2;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    padding: 16px 0;
+    margin: 24px auto;
+    text-decoration: none;
+    width: 90%;
+    transition: background 0.2s;
+}
+.forum-link-btn:hover {
+    background: #1A5BB8;
+}
 /* <!-- Product and Bidding Grids --> */
 
 /* ==== Product Grid ==== */
